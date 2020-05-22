@@ -1,0 +1,2 @@
+rootProject.name='My Next Nationality'
+include ':app'
