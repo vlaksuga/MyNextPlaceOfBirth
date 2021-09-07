@@ -15,7 +15,6 @@ class Input : AppCompatActivity() {
     private lateinit var inputName: EditText
     private lateinit var inputBirth: EditText
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
@@ -27,8 +26,8 @@ class Input : AppCompatActivity() {
         geneButton.setOnClickListener {
 
             // Validate name null or blank
-            val userName: String? = inputName.text.toString()
-            if (userName.isNullOrBlank()) {
+            val userName: String = inputName.text.toString()
+            if (userName.isBlank()) {
                 Toast.makeText(this, "이름을 입력하세요", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

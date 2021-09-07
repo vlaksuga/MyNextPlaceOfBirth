@@ -9,24 +9,23 @@
         android:roundIcon="@mipmap/pob_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.vlaksuga.mynextnationality.SplashScreen">
+
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.vlaksuga.mynextnationality.Input"></activity>
-        <activity android:name="com.vlaksuga.mynextnationality.MainActivity" />
+        <activity android:name=".Input" />
+        <activity android:name=".MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
-        <meta-data
-            android:name="com.google.android.gms.ads.com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7714576164572355~7314230382"/>
     </application>
 
 </manifest>

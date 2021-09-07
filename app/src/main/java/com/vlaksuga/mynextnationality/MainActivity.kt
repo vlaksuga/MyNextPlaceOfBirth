@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.*
 import com.vlaksuga.mynextnationality.R.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,30 +12,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resultNameView: TextView
     private lateinit var nationName: TextView
     private lateinit var nationDesc: TextView
-    lateinit var mAdView : AdView
-    private lateinit var mInterstitialAd: InterstitialAd
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_main)
-        MobileAds.initialize(this) {}
-
-        // ADMOB COVERED
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-7714576164572355/4022207856"
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
-
-        mInterstitialAd.adListener = object: AdListener() {
-            override fun onAdLoaded() {
-                mInterstitialAd.show()
-            }
-        }
-
-        // ADMOB BANNER
-        mAdView = findViewById(id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
-
 
         //find Views
         flagImage = findViewById(id.flag_image)
